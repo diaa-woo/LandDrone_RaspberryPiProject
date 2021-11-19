@@ -1,0 +1,44 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#contents {
+    background-color: rgb(226, 140, 140);
+    background-size: cover;
+    width: 700px;
+    height: 400px;
+    top: 100px;
+    margin: 0 auto;
+}
+button {
+    border: 0px;
+    background-color: white;
+}
+#b1 {
+    right: 50px;
+    top: 50px;
+    font-size: 32px;
+}
+#sensor {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+#table {
+    width: 300px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+}
+#now {
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+th {
+    height: 50px;
+    background-color: rgb(194, 209, 224);
+    border: 2px solid black;
+}
+

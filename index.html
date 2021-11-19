@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename=index.css')}}">
+</head>
+<body>
+    <h1 id="contents"></h1>
+    <div id="camera">
+        <img src="{{url_for('static', filename='image/photo.png')}}" alt="photo.png image" id="photo">
+        <img src="{{url_for('static', filename='image/gallery.png')}}" alt="gallery.png image" id="gallery">
+    </div>
+    <div id="screen">
+
+    </div>
+    <div id="arrowkey">
+        <button type="button" id="up" ><img src="{{url_for('static', filename='image/up.png')}}" alt="up.png image"></button>
+        <button type="button" id="down" ><img src="{{url_for('static', filename='image/down.png')}}" alt="down.png image"></button>
+        <button type="button" id="right" ><img src="{{url_for('static', filename='image/right.png')}}" alt="left.png image"></button>
+        <button type="button" id="left" ><img src="{{url_for('static', filename='image/left.png')}}" alt="right.png image"></button>
+    </div>
+    <div id="sensor">
+        <h3 id="b1">Sensor</h3>
+        <button id="now">Sensor</button>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>온도(℃)</th>
+                    <th>습도(%)</th>
+                </tr>
+            </thead>
+        </table>
+        <tbody></tbody>
+    </div>
+    <script src="{{url_for('static', filename=index.js')}}"></script>
+</body>
+</html>
