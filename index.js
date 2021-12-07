@@ -81,3 +81,15 @@ app.get('/img', function (req, res) {
 server.listen(8000, function() {
     console.log('express server listening on port ' + server.address().port) ;
   }) ;
+
+  
+  $( 'button' ).click(function() {
+    $.get( 'feed')
+    .done(function( data ) {
+      if(data == '1'){
+        alert('Success!');
+      }else{
+        alert('Fail!');
+      }
+    });
+  });
