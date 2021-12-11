@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename=index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
 </head>
 <body>
     <h1 id="contents"></h1>
@@ -13,7 +13,7 @@
         <img src="{{url_for('static', filename='image/gallery.png')}}" alt="gallery.png image" id="gallery">
     </div>
     <div id="screen">
-        <button type="button" id="button">시작!</button>
+        <button type="button" id="button">촬영!</button>
     </div>
     <div id="arrowkey">
         <button type="button" id="up" ><img src="{{url_for('static', filename='image/up.png')}}" alt="up.png image"></button>
@@ -34,6 +34,6 @@
         </table>
         <tbody></tbody>
     </div>
-    <script src="{{url_for('static', filename=index.js')}}"></script>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
 </body>
 </html>
