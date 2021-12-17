@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
 </head>
 <body>
-    <h1 id="contents"></h1>
+    <img  class="camera-bg" id="contents" class="center" src="{{ url_for('video_feed') }}">
     <div id="camera">
         <img src="{{url_for('static', filename='image/photo.png')}}" alt="photo.png image" id="photo">
         <img src="{{url_for('static', filename='image/gallery.png')}}" alt="gallery.png image" id="gallery">

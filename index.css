@@ -9,7 +9,7 @@ body {
     width: 700px;
     height: 400px;
     top: 100px;
-    margin: 0 auto;
+    margin-left: 400px;
 }
 button {
     border: 0px;

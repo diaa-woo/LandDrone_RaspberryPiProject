@@ -3,6 +3,7 @@ oScript.type = "text/javascript";
 oScript.src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
 document.getElementsByTagName("head")[0].appendChild(oScript);
 
+
 var clickTimedht = document.querySelector("#now");
 var clickup = document.querySelector("#up");
 var clickdown = document.querySelector("#down");
@@ -93,3 +94,20 @@ server.listen(8000, function() {
       }
     });
   });
+
+
+  import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
+
+// Set the configuration for your app
+// TODO: Replace with your app's config object
+const firebaseConfig = {
+  apiKey: '<AIzaSyBgbAWLbIyg10Z3I4RpkYPxdQMSfvprfyo>',
+  authDomain: '<https://accounts.google.com/o/oauth2/auth>',
+  databaseURL: 'gs://landdroneproject.appspot.com',
+  storageBucket: '<your-storage-bucket-url>'
+};
+const firebaseApp = initializeApp(firebaseConfig);
+
+// Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage(firebaseApp);
