@@ -33,79 +33,80 @@ clickTimedht.addEventListener("click", function() {
         });
 });
 
-var express = require('express'),
-    http = require('http'),
-    app = express(),
-    server = http.createServer(app) ;
-app.use(express.static(__dirname + '/images')) ;
+clickup.onclick = function() {
+  $.ajax({
+    type: 'GET',
+    url:'/getup',
+    success: function(data) {
+        alert(data)
+    }
+  });
+}
 
-var img_flag = 0 ;
+clickdown.onclick = function() {
+  $.ajax({
+    type: 'GET',
+    url:'/getdown',
+    success: function(data) {
+        alert(data)
+    }
+  });
+}
 
-var cameraOptions = {
-  width : 600,
-  height : 420,
-  mode : 'timelapse',
-  awb : 'off',
-  encoding : 'jpg',
-  output : 'images/camera.jpg',
-  q : 50,
-  nopreview : true,
-  th : '0:0:0'
-};
+clickleft.onclick = function() {
+  $.ajax({
+    type: 'GET',
+    url:'/getleft',
+    success: function(data) {
+        alert(data)
+    }
+  });
+}
 
-var camera = new require('raspicam')(cameraOptions) ;
-camera.start() ;
-camera.on('exit', function() {
-    camera.stop() ;
-    console.log('Restart camera') ;
-    camera.start() ;
-  }) ;
+clickright.onclick = function() {
+  $.ajax({
+    type: 'GET',
+    url:'/getright',
+    success: function(data) {
+        alert(data)
+    }
+  });
+}
 
-camera.on('read', function() {
-    img_flag = 1 ;
-  }) ;
+clickcam.onclick = function() {
+  $.ajax({
+    type: 'GET',
+    url:'/getcam',
+    success: function(data) {
+        alert(data)
+    }
+  });
+}
 
-app.get('/cam', function(req, res) {
-    res.sendfile('cam.html', {root : __dirname}) ;
-  }) ;
-
-
-
-app.get('/img', function (req, res) {
-    console.log('get /img') ;
-      if (img_flag == 1) {
-        img_flag = 0 ;
-      }
-  }) ;
-
-
-server.listen(8000, function() {
-    console.log('express server listening on port ' + server.address().port) ;
-  }) ;
-
-  
-  $( 'button' ).click(function() {
-    $.get( 'feed')
-    .done(function( data ) {
-      if(data == '1'){
-        alert('Success!');
-      }else{
-        alert('Fail!');
-      }
-    });
+clickgal.onclick = function() {
+  $.ajax({
+    type: 'GET',
+    url:'/getgal',
+    success: function(data) {
+        alert(data)
+    }
   });
 
+  storage;
+}
 
-  import { initializeApp } from "firebase/app";
+
+
+import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
 // Set the configuration for your app
 // TODO: Replace with your app's config object
 const firebaseConfig = {
-  apiKey: '<AIzaSyBgbAWLbIyg10Z3I4RpkYPxdQMSfvprfyo>',
-  authDomain: '<https://accounts.google.com/o/oauth2/auth>',
+  apiKey: 'AIzaSyBgbAWLbIyg10Z3I4RpkYPxdQMSfvprfyo',
+  authDomain: 'landdroneproject.firebaseapp.com',
   databaseURL: 'gs://landdroneproject.appspot.com',
-  storageBucket: '<your-storage-bucket-url>'
+  storageBucket: 'landdroneproject.appspot.com'
 };
 const firebaseApp = initializeApp(firebaseConfig);
 
