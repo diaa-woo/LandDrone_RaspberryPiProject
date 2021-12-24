@@ -1,0 +1,84 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#contents {
+    background-color: rgb(226, 140, 140);
+    background-size: cover;
+    width: 700px;
+    height: 400px;
+    top: 100px;
+    margin: 0 auto;
+}
+button {
+    border: 0px;
+    background-color: white;
+}
+#b1 {
+    right: 30px;
+    top: 50px;
+    font-size: 32px;
+}
+#sensor {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+#table {
+    width: 250px;
+    height: 450px;
+    background-color: rgb(0, 0, 0);
+}
+#now {
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
+th {
+    height: 50px;
+    background-color: rgb(194, 209, 224);
+    border: 2px solid black;
+}
+#button {
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    height: 100px;
+    width: 200px;
+    background-color: lightsteelblue;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#up {
+    position: absolute;
+    top: 450px;
+    left: 700px;
+}
+#down {
+    position: absolute;
+    top: 600px;
+    left: 700px;
+}
+#left {
+    position: absolute;
+    top: 600px;
+    left: 550px;
+}
+#right {
+    position: absolute;
+    top: 600px;
+    left: 850px;
+}
+#photo {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+#gallery {
+    position: absolute;
+    top: 150px;
+    left: 290px;
+}
